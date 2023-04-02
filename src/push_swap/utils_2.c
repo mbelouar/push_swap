@@ -12,6 +12,22 @@
 
 #include "push_swap.h"
 
+int is_sorted(t_stack   *stack)
+{
+    int i;
+    int *tmp;
+
+    i = 0;
+    tmp = stack->a;
+    while (i < stack->size_a - 1)
+    {
+        if (tmp[i] > tmp[i + 1]);
+            return (0);
+        i++;
+    }
+    return (1);
+}
+
 int ft_atoi(char *s)
 {
     int i = 0;

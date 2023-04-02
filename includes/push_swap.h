@@ -41,5 +41,7 @@ void    ft_fill_stack(char **str, t_stack *stack);
 int     is_digit(int c);
 int     ft_atoi(char *s);
 void    check_doubles(t_stack *stack);
+void    sa(t_stack   *stack);
+int     is_sorted(t_stack   *stack);
 
 #endif
