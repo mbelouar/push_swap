@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/02 03:40:47 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 03:52:07 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,15 @@ void    ft_fill_stack(char **str, t_stack *stack);
 int     is_digit(int c);
 int     ft_atoi(char *s);
 void    check_doubles(t_stack *stack);
-void    sa(t_stack   *stack);
-int     is_sorted(t_stack   *stack);
+int     is_sorted(t_stack *stack);
+void    sa(t_stack *stack, int check);
+void    sb(t_stack *stack, int check);
+void    ss(t_stack *stack, int check);
+void    ra(t_stack *stack, int check);
+void    rra(t_stack *stack, int check);
+void    rrb(t_stack *stack, int check);
+void    rrr(t_stack *stack, int check);
+void    pa(t_stack *stack, int check);
+void    pb(t_stack *stack, int check);
 
 #endif

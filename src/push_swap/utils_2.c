@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:33:12 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/02 03:20:08 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 02:19:42 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,11 @@
 int is_sorted(t_stack   *stack)
 {
     int i;
-    int *tmp;
 
     i = 0;
-    tmp = stack->a;
     while (i < stack->size_a - 1)
     {
-        if (tmp[i] > tmp[i + 1]);
+        if (stack->a[i] > stack->a[i + 1])
             return (0);
         i++;
     }

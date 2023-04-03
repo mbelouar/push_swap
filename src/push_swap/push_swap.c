@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/02 03:41:59 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 03:54:59 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int main(int ac, char **av)
 {
     t_stack stack;
-    int     len;
     char    **str;
 
     if (!ac)
@@ -23,39 +22,52 @@ int main(int ac, char **av)
     str = ft_stock_args(&stack, ac, av);
     ft_fill_stack(str, &stack);
     if (is_sorted(&stack) == 1)
-        write(1, "sorted\n", 7);
+        return (free(stack.a), 1);
     if (stack.size_a == 2)
-        // swap a or b
-    if (stack.size_a == 3)
-        // sort three
-    if (stack.size_a == 4)
-        // sort four
-    if (stack.size_a == 5)
-        // sort five
-    if (stack.size_a > 5 && stack.size_a <= 10)
-        // sort ten
-    if (stack.size_a > 10 && stack.size_a <= 100)
-        // sort hundred
-
-    //if (stack_a.size_a == 2)
+        sa(&stack, 1);
+    stack.b = (int *)malloc(sizeof(int) * stack.size_a);
+    if (!stack.b)
+        return (free(stack.a), 1);
+    stack.size_b = 0;
     
-
-    // // Print the original stack
+    // if (stack.size_a == 3)
+    //     sort_three(stack, 1);
+    // if (stack.size_a == 4)
+        // sort four
+    // if (stack.size_a == 5)
+        // sort five
+    // if (stack.size_a > 5 && stack.size_a <= 10)
+        // sort ten
+    // if (stack.size_a > 10 && stack.size_a <= 100)
+        // sort hundred
+    
+    // for (int i = 0; i < stack.size_a; i++)
+    //     printf("stack->a[%d]\t", stack.a[i]);
+    // printf("\n");
+    // pb(&stack, 1);
+    // pb(&stack, 1);
+    // for (int i = 0; i < stack.size_a; i++)
+    //     printf("stack->a[%d]\t", stack.a[i]);
+    // printf("\n");
+    
+    // for (int i = 0; i < stack.size_b; i++)
+    //     printf("stack->b[%d]\t", stack.b[i]);
+    // Print the original stack
     // printf("Original stack: ");
-    // for (int i = 0; i < stack_a.size_a; i++) {
-    //     printf("%d ", stack_a.a[i]);
+    // for (int i = 0; i < stack.size_a; i++) {
+    //     printf("%d ", stack.a[i]);
     // }
     // printf("\n");
 
     // // Call the sa function to swap the top two elements
-    // sa(&stack_a);
+    // pa(&stack, 1);
 
     // // Print the updated stack
     // printf("Updated stack: ");
-    // for (int i = 0; i < stack_a.size_a; i++) {
-    //     printf("%d ", stack_a.a[i]);
+    // for (int i = 0; i < stack.size_a; i++) {
+    //     printf("%d ", stack.a[i]);
     // }
-    // printf("\n");
+    printf("\n");
 
     return (0);
 }

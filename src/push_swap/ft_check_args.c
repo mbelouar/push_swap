@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:35 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/02 03:40:52 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 01:14:58 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ char    **ft_stock_args(t_stack *stack, int ac, char **av)
         stack->size_a++;
         i++;
     }
-    // printf("size a : %d", stack->size_a);
-    // printf("\nsize b : %d", stack->size_b);
     free(linked_str);
     return (stock_str);
 }
@@ -96,7 +94,4 @@ void    ft_fill_stack(char **str, t_stack *stack)
         i++;
     }
     check_doubles(stack);
-    
-    // for (int i = 0; i < stack->size_a; i++)
-    //    printf("%d\n", stack->a[i]);
 }
