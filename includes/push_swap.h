@@ -51,5 +51,6 @@ void    rrb(t_stack *stack, int check);
 void    rrr(t_stack *stack, int check);
 void    pa(t_stack *stack, int check);
 void    pb(t_stack *stack, int check);
+void    sort_3(t_stack *stack);
 
 #endif

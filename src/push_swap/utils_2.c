@@ -12,6 +12,28 @@
 
 #include "push_swap.h"
 
+void    sort_3(t_stack *stack)
+{
+    if (is_sorted(stack));
+        return ;
+    if (stack->a[0] > stack->a[1] && stack->a[0] < stack->a[2] && stack->a[1] < stack->a[2])
+        sa(stack, 1);
+    else if (stack->a[0] > stack->a[1] && stack->a[1] > stack->a[3])
+    {
+        sa(stack, 1);
+        rra(stack, 1);
+    }
+    else if (stack->a[0] > stack->a[1] && stack->a[0] > stack->a[2] && stack->a[1] < stack->a[2])
+        ra(stack, 1);
+    else if (stack->a[0] < stack->a[1] && stack->a[1] > stack->a[2] && stack->a[0] < stack->a[2])
+    {
+        sa(stack, 1);
+        ra(stack, 1);
+    }
+    else if (stack->a[0] < stack->a[1] && stack->a[1] > stack->a[2] && stack->a[0] > stack->a[2])
+        rra(stack, 1);
+}
+
 int is_sorted(t_stack   *stack)
 {
     int i;

@@ -29,13 +29,10 @@ int main(int ac, char **av)
     if (!stack.b)
         return (free(stack.a), 1);
     stack.size_b = 0;
-    
-    // if (stack.size_a == 3)
-    //     sort_three(stack, 1);
-    // if (stack.size_a == 4)
-        // sort four
-    // if (stack.size_a == 5)
-        // sort five
+    if (stack.size_a == 3)
+        sort_3(&stack);
+    if (stack.size_a == 4 || stack.size_a == 5)
+        sort_4_and_5();
     // if (stack.size_a > 5 && stack.size_a <= 10)
         // sort ten
     // if (stack.size_a > 10 && stack.size_a <= 100)
@@ -67,7 +64,7 @@ int main(int ac, char **av)
     // for (int i = 0; i < stack.size_a; i++) {
     //     printf("%d ", stack.a[i]);
     // }
-    printf("\n");
+    // printf("\n");
 
     return (0);
 }
