@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/03 03:52:07 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 21:07:38 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,9 @@ void    rrr(t_stack *stack, int check);
 void    pa(t_stack *stack, int check);
 void    pb(t_stack *stack, int check);
 void    sort_3(t_stack *stack);
+void    sort_4_and_5(t_stack *stack);
+int     small_index(t_stack *stack);
+void    ft4_push_small_to_b(t_stack *stack, int index);
+void    ft5_push_small_to_b(t_stack *stack, int index);
 
 #endif

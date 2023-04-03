@@ -1,27 +1,76 @@
 #include "push_swap.h"
 
-void    sort_4_and_5(t_stack *stack)
+int    small_index(t_stack *stack)
 {
     int i;
+    int index = 0;
 
-    i = 0;
-    if (is_sorted(&stack->a) == 0)
+    i = 1;
+    int small_value = stack->a[0];
+    while (i < stack->size_a)
+    {
+        if (stack->a[i] < small_value)
+        {
+            small_value = stack->a[i];
+            index = i;
+        }
+        i++;
+    }
+    return (index);
+}
+
+void    ft5_push_small_to_b(t_stack *stack, int index)
+{
+    if (index == 1)
+        sa(stack, 1);
+    else if (index == 2)
+    {
+        ra(stack, 1);
+        ra(stack, 1);
+    }
+    else if (index == 3)
+    {
+        rra(stack, 1);
+        rra(stack, 1);
+    }
+    else if (index == 4)
+        ra(stack, 1);
+    pb(stack, 1);
+}
+
+void    ft4_push_small_to_b(t_stack *stack, int index)
+{
+    if (index == 1)
+        sa(stack, 1);
+    else if (index == 2)
+    {
+        rra(stack, 1);
+        rra(stack, 1);
+    }
+    else if (index == 3)
+        ra(stack, 1);
+    pb(stack, 1);
+}
+
+void    sort_4_and_5(t_stack *stack)
+{
+    int index;
+
+    index = 0;
+    if (is_sorted(stack) == 0)
     {
         if (stack->size_a == 5)
         {
-            // push the small number to the stack b
-            i++;
+            index = small_index(stack);
+            ft5_push_small_to_b(stack, index);
         }
         if (stack->size_a == 4)
         {
-            // push the small number to the stack b
-            i++;
+            index = small_index(stack);
+            ft4_push_small_to_b(stack, index);
         }
-        sort_3(&stack);
-        while (i > 0)
-        {
-            // push what we have at the stack b to the stack a
-            i--;
-        }
+        sort_3(stack);
+        pa(stack, 1);
+        pa(stack, 1);
     }
 }

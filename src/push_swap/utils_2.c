@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:33:12 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/03 02:19:42 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/03 19:40:41 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void    sort_3(t_stack *stack)
 {
-    if (is_sorted(stack));
+    if (is_sorted(stack))
         return ;
     if (stack->a[0] > stack->a[1] && stack->a[0] < stack->a[2] && stack->a[1] < stack->a[2])
         sa(stack, 1);
-    else if (stack->a[0] > stack->a[1] && stack->a[1] > stack->a[3])
+    else if (stack->a[0] > stack->a[1] && stack->a[1] > stack->a[2])
     {
         sa(stack, 1);
         rra(stack, 1);
