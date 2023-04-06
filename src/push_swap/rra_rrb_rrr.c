@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rra_rrb_rrr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbelouar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:19:11 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/04 01:19:12 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/06 22:56:16 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void    rrb(t_stack *stack, int check)
     }
     stack->b[0] = last_ele;
     if (check == 1)
-        write(1, "rra\n", 4);
+        write(1, "rrb\n", 4);
 }
 
 void    rrr(t_stack *stack, int check)

@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:19:05 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/06 00:54:05 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/06 23:22:53 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,13 @@ void    pa(t_stack *stack, int check)
         }
         stack->size_b--;
         stack->size_a++;
-        i++;
-        while (i >= 0)
+        i = stack->size_a;
+        while (i)
         {
             stack->a[i] = stack->a[i - 1];
             i--;
         }
-        stack->a[0] = top;
+         stack->a[0] = top;
         if (check == 1)
             write(1, "pa\n", 3);
     }
@@ -98,8 +98,8 @@ void    pb(t_stack *stack, int check)
         }
         stack->size_a--;
         stack->size_b++;
-        i++;
-        while (i >= 0)
+        i = stack->size_b;
+        while (i)
         {
             stack->b[i] = stack->b[i - 1];
             i--;
@@ -109,3 +109,5 @@ void    pb(t_stack *stack, int check)
             write(1, "pb\n", 3);
     }
 }
+
+
