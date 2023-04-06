@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ra_rb_rr_pa_pb.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/04 01:19:05 by mbelouar          #+#    #+#             */
+/*   Updated: 2023/04/06 00:54:05 by mbelouar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void    ra(t_stack  *stack, int check)
@@ -31,7 +43,7 @@ void    rb(t_stack  *stack, int check)
     }
     stack->b[stack->size_b - 1] = top;
     if (check == 1)
-        write(1, "ra\n", 3);
+        write(1, "rb\n", 3);
 }
 
 void    rr(t_stack *stack, int check)

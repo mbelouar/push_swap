@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/03 21:07:38 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:47:14 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void    sa(t_stack *stack, int check);
 void    sb(t_stack *stack, int check);
 void    ss(t_stack *stack, int check);
 void    ra(t_stack *stack, int check);
+void    rb(t_stack *stack, int check);
 void    rra(t_stack *stack, int check);
 void    rrb(t_stack *stack, int check);
 void    rrr(t_stack *stack, int check);
@@ -56,5 +57,9 @@ void    sort_4_and_5(t_stack *stack);
 int     small_index(t_stack *stack);
 void    ft4_push_small_to_b(t_stack *stack, int index);
 void    ft5_push_small_to_b(t_stack *stack, int index);
+void    ft_sort_array(t_stack *stack);
+void    ft_fill_stack_with_sorted_index(t_stack *stack, int valeur, int index);
+int    *put_stack_in_array(t_stack *stack);
+void    sort_100(t_stack *stack);
 
 #endif
