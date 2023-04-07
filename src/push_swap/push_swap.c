@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/06 23:27:14 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/07 21:00:07 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,14 @@ int main(int ac, char **av)
     else if (stack.size_a <= 100)
     {
         ft_sort_array(&stack);
-        solve_a(&stack, 19, 0);
-        solve_b(&stack);
+        push_from_a_to_b(&stack, 19);
+        push_from_b_to_a(&stack);
     }
     else if (stack.size_a > 100 && stack.size_a <= 500)
     {
         ft_sort_array(&stack);
-        solve_a(&stack, 35, 0);
-        solve_b(&stack);
+        push_from_a_to_b(&stack, 35);
+        push_from_b_to_a(&stack);
     }
     return (0);
 }

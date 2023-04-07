@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_100.c                                         :+:      :+:    :+:   */
+/*   sort_big_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:40 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/06 22:35:29 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/07 20:54:22 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,17 +65,13 @@ void    ft_sort_array(t_stack *stack)
     free(tab);
 }
 
-void    sort_100(t_stack *stack)
+void    push_from_a_to_b(t_stack *stack, int range)
 {
     int i;
-    int range;
 
     i = 0;
-    int len = stack->size_a;
-    range = 15;
-    while (i < len)
+    while (stack->size_a)
     {
-        range += i;
         if (stack->a[0] < i)
         {
             pb(stack ,1);
@@ -89,54 +85,5 @@ void    sort_100(t_stack *stack)
         }
         else
             ra(stack, 1);
-    }  
-}
-
-void    solve_a(t_stack *stack, int range, int i)
-{
-    while (stack->size_a)
-    {
-        if (stack->a[0] < i)
-        {
-            pb(stack, 1);
-            rb(stack, 1);
-            ++i;
-        }
-        else if (stack->a[0] < range + i)
-        {
-            pb(stack, 1);
-            ++i;
-        }
-        else
-            ra(stack, 1);
-    }
-}
-int    get_index(int *stack, int size, int n);
-
-void    solve_b(t_stack *stack)
-{
-    while (stack->size_b)
-    {
-        if (get_index(stack->b, stack->size_b, stack->size_b
-                - 1) < stack->size_b / 2)
-            while (get_index(stack->b, stack->size_b, stack->size_b - 1))
-                rb(stack, 1);
-        else
-            while (get_index(stack->b, stack->size_b, stack->size_b - 1))
-                rrb(stack, 1);
-        pa(stack, 1);
-    }
-}
-
-int    get_index(int *stack, int size, int n)
-{
-    int    i;
-
-    i = -1;
-    while (++i < size)
-    {
-        if (stack[i] == n)
-            return (i);
-    }
-    return (-1);
+    } 
 }

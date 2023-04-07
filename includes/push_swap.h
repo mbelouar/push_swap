@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/06 22:47:25 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/07 20:52:56 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
@@ -29,10 +28,6 @@ struct s_stack
     int size_a;
     int size_b;
 };
-
-
-void    solve_a(t_stack *stack, int range, int i);
-void    solve_b(t_stack *stack);
 
 char    **ft_stock_args(t_stack *stack, int ac, char **av);
 int     is_empty(char *str);
@@ -64,6 +59,8 @@ void    ft5_push_small_to_b(t_stack *stack, int index);
 void    ft_sort_array(t_stack *stack);
 void    ft_fill_stack_with_sorted_index(t_stack *stack, int valeur, int index);
 int    *put_stack_in_array(t_stack *stack);
-void    sort_100(t_stack *stack);
+void    push_from_a_to_b(t_stack *stack, int range);
+void    push_from_b_to_a(t_stack *stack);
+int     get_max_index(t_stack *stack);
 
 #endif
