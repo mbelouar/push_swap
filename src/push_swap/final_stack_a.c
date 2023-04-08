@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   final_stack_a.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/07 22:06:17 by mbelouar          #+#    #+#             */
+/*   Updated: 2023/04/07 22:06:18 by mbelouar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	get_max_index(t_stack *stack)
@@ -37,6 +49,4 @@ void	push_from_b_to_a(t_stack *stack)
 		pa(stack, 1);
 		max_index = get_max_index(stack);
 	}
-	// free(stack->a);
-	//free(stack->b);
 }

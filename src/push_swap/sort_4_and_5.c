@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_4_and_5.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbelouar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/04 01:18:50 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/08 22:55:53 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	sort_4_and_5(t_stack *stack)
 			ft4_push_small_to_b(stack, index);
 		}
 		sort_3(stack);
-		pa(stack, 1);
-		pa(stack, 1);
+		while(stack->size_b)
+			pa(stack, 1);
 	}
 }

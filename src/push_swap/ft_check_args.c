@@ -1,12 +1,13 @@
+
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_check_args.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:35 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/07 21:21:58 by codespace        ###   ########.fr       */
+/*   Updated: 2023/04/07 22:12:39 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +54,9 @@ void	check_doubles(t_stack *stack)
 
 char	**ft_stock_args(t_stack *stack, int ac, char **av)
 {
-	int     i;
-	char    *linked_str;
-	char    **stock_str;
+	int		i;
+	char	*linked_str;
+	char	**stock_str;
 
 	i = 1;
 	stack->size_a = 0;
@@ -73,16 +74,16 @@ char	**ft_stock_args(t_stack *stack, int ac, char **av)
 		i++;
 	}
 	stock_str = ft_split(linked_str, ' ');
-	free(linked_str);
 	i = -1;
 	while (stock_str[++i])
 		stack->size_a++;
+	free(linked_str);
 	return (stock_str);
 }
 
 void	ft_fill_stack(char **str, t_stack *stack)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	stack->a = (int *)malloc(sizeof(int) * stack->size_a);
@@ -91,12 +92,12 @@ void	ft_fill_stack(char **str, t_stack *stack)
 		stack->a[i] = ft_atoi(str[i]);
 		i++;
 	}
-    i = 0;
-    while (str[i])
-    {
+	i = 0;
+	while (str[i])
+	{
 		free(str[i]);
-        i++;
-    }
+		i++;
+	}
 	free(str);
 	check_doubles(stack);
 }

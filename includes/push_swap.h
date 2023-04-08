@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/07 20:52:56 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/08 23:17:46 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,17 @@ int						is_digit(int c);
 int						ft_atoi(char *s);
 void					check_doubles(t_stack *stack);
 int						is_sorted(t_stack *stack);
-void					sa(t_stack *stack, int);
-void					sb(t_stack *stack, int);
-void					ss(t_stack *stack, int);
-void					ra(t_stack *stack, int);
-void					rb(t_stack *stack, int);
-void					rra(t_stack *stack, int);
-void					rrb(t_stack *stack, int);
-void					rrr(t_stack *stack, int);
-void					pa(t_stack *stack, int);
-void					pb(t_stack *stack, int);
+void					sa(t_stack *stack, int check);
+void					sb(t_stack *stack, int check);
+void					ss(t_stack *stack, int check);
+void					ra(t_stack *stack, int check);
+void					rb(t_stack *stack, int check);
+void					rr(t_stack *stack, int check);
+void					rra(t_stack *stack, int check);
+void					rrb(t_stack *stack, int check);
+void					rrr(t_stack *stack, int check);
+void					pa(t_stack *stack, int check);
+void					pb(t_stack *stack, int check);
 void					sort_3(t_stack *stack);
 void					sort_4_and_5(t_stack *stack);
 int						small_index(t_stack *stack);
@@ -64,5 +65,7 @@ int						*put_stack_in_array(t_stack *stack);
 void					push_from_a_to_b(t_stack *stack, int range);
 void					push_from_b_to_a(t_stack *stack);
 int						get_max_index(t_stack *stack);
+void					kulchi(t_stack *stack);
+void    				ft_check_instructions(t_stack *stack, char *line);
 
 #endif
