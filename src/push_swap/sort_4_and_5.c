@@ -84,7 +84,7 @@ void	sort_4_and_5(t_stack *stack)
 			ft4_push_small_to_b(stack, index);
 		}
 		sort_3(stack);
-		while(stack->size_b)
+		while (stack->size_b)
 			pa(stack, 1);
 	}
 }

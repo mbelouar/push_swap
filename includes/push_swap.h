@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/08 23:17:46 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/09 02:02:43 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ void					push_from_a_to_b(t_stack *stack, int range);
 void					push_from_b_to_a(t_stack *stack);
 int						get_max_index(t_stack *stack);
 void					kulchi(t_stack *stack);
-void    				ft_check_instructions(t_stack *stack, char *line);
+void					ft_check_instructions(t_stack *stack, char *line);
 
 #endif
