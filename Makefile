@@ -6,7 +6,7 @@
 #    By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 01:33:52 by mbelouar          #+#    #+#              #
-#    Updated: 2023/04/08 23:25:54 by mbelouar         ###   ########.fr        #
+#    Updated: 2023/04/09 02:21:10 by mbelouar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC_BONUS 	= src/checker/ft_check_instructions.c \
 			src/push_swap/sa_sb_ss.c \
 			src/push_swap/ft_check_args.c \
 			src/push_swap/utils_2.c \
+			src/checker/free_all.c \
 
 NAME		= push_swap
 NAME_BONUS 	= checker
