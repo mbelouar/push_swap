@@ -6,13 +6,13 @@
 #    By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 01:33:52 by mbelouar          #+#    #+#              #
-#    Updated: 2023/04/09 02:21:10 by mbelouar         ###   ########.fr        #
+#    Updated: 2023/04/13 02:39:23 by mbelouar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS		= src/push_swap/final_stack_a.c \
 			src/push_swap/ft_check_args.c \
-			src/push_swap/kulchi.c \
+			src/push_swap/all.c \
 			src/push_swap/push_swap.c \
 			src/push_swap/ra_rb_rr_pa_pb.c \
 			src/push_swap/rra_rrb_rrr.c \

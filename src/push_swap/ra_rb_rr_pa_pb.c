@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:19:05 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/06 23:22:53 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:04:56 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	pa(t_stack *stack, int check)
 	int	i;
 	int	top;
 
-	if (stack->b)
+	if (stack->size_b)
 	{
 		i = 0;
 		top = stack->b[0];
@@ -87,7 +87,7 @@ void	pb(t_stack *stack, int check)
 	int	i;
 	int	top;
 
-	if (stack->a)
+	if (stack->size_a)
 	{
 		i = 0;
 		top = stack->a[0];

@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/09 02:02:43 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:38:36 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,15 @@ void					sort_4_and_5(t_stack *stack);
 int						small_index(t_stack *stack);
 void					ft4_push_small_to_b(t_stack *stack, int index);
 void					ft5_push_small_to_b(t_stack *stack, int index);
-void					ft_sort_array(t_stack *stack);
+int						*ft_sort_array(t_stack *stack);
 void					ft_fill_stack_with_sorted_index(t_stack *stack,
 							int valeur, int index);
 int						*put_stack_in_array(t_stack *stack);
-void					push_from_a_to_b(t_stack *stack, int range);
+void					push_from_a_to_b(t_stack *stack, int *tab,
+							int start, int end);
 void					push_from_b_to_a(t_stack *stack);
 int						get_max_index(t_stack *stack);
-void					kulchi(t_stack *stack);
+void					all(t_stack *stack);
 void					ft_check_instructions(t_stack *stack, char *line);
 
 #endif

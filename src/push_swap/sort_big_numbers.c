@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:40 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/07 20:54:22 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:39:05 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,7 @@ int	*put_stack_in_array(t_stack *stack)
 	return (tab);
 }
 
-void	ft_fill_stack_with_sorted_index(t_stack *stack, int valeur, int index)
-{
-	int	i;
-
-	i = 0;
-	while (i < stack->size_a)
-	{
-		if (stack->a[i] == valeur)
-			stack->a[i] = index;
-		i++;
-	}
-}
-
-void	ft_sort_array(t_stack *stack)
+int	*ft_sort_array(t_stack *stack)
 {
 	int	i;
 	int	tmp;
@@ -59,31 +46,30 @@ void	ft_sort_array(t_stack *stack)
 		}
 		i++;
 	}
-	i = -1;
-	while (++i < stack->size_a)
-		ft_fill_stack_with_sorted_index(stack, tab[i], i);
-	free(tab);
+	return (tab);
 }
 
-void	push_from_a_to_b(t_stack *stack, int range)
+void	push_from_a_to_b(t_stack *stack, int *tab, int start, int end)
 {
-	int	i;
+	int	top;
 
-	i = 0;
 	while (stack->size_a)
 	{
-		if (stack->a[0] < i)
+		top = stack->a[0];
+		if (top <= tab[start])
 		{
 			pb(stack, 1);
 			rb(stack, 1);
-			i++;
+			start++;
+			end++;
 		}
-		else if (stack->a[0] < range + i)
+		else if (top > tab[start] && top < tab[end])
 		{
 			pb(stack, 1);
-			i++;
+			start++;
+			end++;
 		}
-		else
+		else if (top >= tab[end])
 			ra(stack, 1);
 	}
 }

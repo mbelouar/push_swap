@@ -6,11 +6,12 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/07 22:30:30 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/13 02:38:18 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include<stdio.h>
 
 int	main(int ac, char **av)
 {
@@ -29,7 +30,7 @@ int	main(int ac, char **av)
 	if (!stack.b)
 		return (free(stack.a), 1);
 	stack.size_b = 0;
-	kulchi(&stack);
+	all(&stack);
 	free(stack.a);
 	free(stack.b);
 	return (0);
