@@ -6,7 +6,7 @@
 #    By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 01:33:52 by mbelouar          #+#    #+#              #
-#    Updated: 2023/04/13 02:39:23 by mbelouar         ###   ########.fr        #
+#    Updated: 2023/04/13 20:38:28 by mbelouar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ OBJS_BONUS := $(SRC_BONUS:.c=.o)
  
 all:		$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(SRCS) 
 			$(CC) $(CFLAGS)  $(SRCS) -o $(NAME)
 
 bonus:		$(OBJS_BONUS)
