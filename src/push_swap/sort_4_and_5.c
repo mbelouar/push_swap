@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/08 22:55:53 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/14 01:54:32 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft5_push_small_to_b(t_stack *stack, int index)
 		rra(stack, 1);
 	}
 	else if (index == 4)
-		ra(stack, 1);
+		rra(stack, 1);
 	pb(stack, 1);
 }
 
@@ -62,7 +62,7 @@ void	ft4_push_small_to_b(t_stack *stack, int index)
 		rra(stack, 1);
 	}
 	else if (index == 3)
-		ra(stack, 1);
+		rra(stack, 1);
 	pb(stack, 1);
 }
 
