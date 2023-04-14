@@ -1,3 +1,5 @@
+![alt text for screen readers](https://i.ytimg.com/vi/kPRA0W1kECg/maxresdefault.jpg "Sorting algrithm in C")
+
 # Introduction:
 ` Summary: `
 ```
