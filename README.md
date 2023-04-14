@@ -1,5 +1,4 @@
-![alt text for screen readers](https://i.ytimg.com/vi/kPRA0W1kECg/maxresdefault.jpg "Sorting algrithm in C")
-
+![alt text for screen readers](https://raw.githubusercontent.com/ridaelfagrouch/push_swap_42/main/assets/push_swap.png "Sorting algrithm in C")
 # Introduction:
 ` Summary: `
 ```
