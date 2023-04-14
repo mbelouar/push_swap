@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 22:28:54 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/13 19:43:58 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:14:43 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@ void	all(t_stack *stack)
 {
 	int	*tab;
 
-	if (stack->size_a == 3)
+	if (stack->size_a == 2)
+	{
+		if (stack->a[0] > stack->a[1])
+			sa(stack, 1);
+	}
+	else if (stack->size_a == 3)
 		sort_3(stack);
 	else if (stack->size_a == 4 || stack->size_a == 5)
 		sort_4_and_5(stack);
