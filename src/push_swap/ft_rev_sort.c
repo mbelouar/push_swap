@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free_all.c                                         :+:      :+:    :+:   */
+/*   ft_rev_sort.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/08 23:42:09 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/08 23:43:07 by mbelouar         ###   ########.fr       */
+/*   Created: 2023/04/16 22:24:41 by mbelouar          #+#    #+#             */
+/*   Updated: 2023/04/17 18:11:18 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_bonus.h"
+#include "push_swap.h"
 
-void	free_all(t_stack *stack, char *line)
+int	is_rev_sorted(t_stack *stack)
 {
-	write(2, "Error\n", 6);
-	free(stack->a);
-	free(stack->b);
-	free(line);
-	exit (1);
+	int	i;
+
+	i = 0;
+	while (i < stack->size_a - 1)
+	{
+		if (stack->a[i] < stack->a[i + 1])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	ft_rev_sort(t_stack *stack)
+{
+	while (stack->size_a)
+		pb(stack, 1);
+	while (stack->size_b)
+	{
+		pa(stack, 1);
+		ra(stack, 1);
+	}
 }

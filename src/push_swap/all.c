@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 22:28:54 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/14 02:18:47 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/17 18:09:49 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ void	all(t_stack *stack)
 		tab = ft_sort_array(stack);
 		push_from_a_to_b(stack, tab, 0, 15);
 		push_from_b_to_a(stack);
+		free(tab);
 	}
 	else
 	{
 		tab = ft_sort_array(stack);
 		push_from_a_to_b(stack, tab, 0, 35);
 		push_from_b_to_a(stack);
+		free(tab);
 	}
 }

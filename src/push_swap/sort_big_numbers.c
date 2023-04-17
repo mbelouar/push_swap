@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:40 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/13 20:39:36 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/15 20:29:25 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,4 @@ void	push_from_a_to_b(t_stack *stack, int *tab, int start, int end)
 		else if (top >= tab[end])
 			ra(stack, 1);
 	}
-	free(tab);
 }

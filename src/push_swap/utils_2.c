@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:33:12 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/07 22:01:44 by codespace        ###   ########.fr       */
+/*   Updated: 2023/04/17 22:01:26 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,17 @@ int	is_sorted(t_stack *stack)
 	return (1);
 }
 
-int	ft_atoi(char *s)
+void	ft_free(char **arr)
+{
+	int	i;
+
+	i = -1;
+	while (arr[++i])
+		free(arr[i]);
+	free(arr);
+}
+
+long	ft_atoi(char *s, char **str, int *ptr)
 {
 	int		i;
 	int		sign;
@@ -68,27 +78,17 @@ int	ft_atoi(char *s)
 		if (s[i] == '-')
 			sign = -1;
 		i++;
+		ft_check_empty_after_sign(s[i], str, ptr);
 	}
 	while (s[i])
 	{
-		if (!is_digit(s[i]))
-			ft_error();
+		ft_check_digit(s[i], str, ptr);
 		res = res * 10 + s[i] - 48;
 		i++;
+		if (res * sign > INT_MAX || res * sign < INT_MIN)
+			ft_free_atoi(str, ptr);
 	}
-	if ((sign == 1 && res > INT_MAX) || (sign == -1 && res > -INT_MIN))
-		ft_error();
 	return (res * sign);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
 
 void	ft_error(void)

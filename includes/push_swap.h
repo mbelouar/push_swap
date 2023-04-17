@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/13 02:38:36 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/17 22:01:02 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
@@ -32,16 +33,18 @@ struct					s_stack
 char					**ft_stock_args(t_stack *stack, int ac, char **av);
 int						is_empty(char *str);
 void					ft_error(void);
-char					*ft_strjoin(char const *s1, char const *s2);
+char					*ft_strjoin(char *s1, char *s2);
 char					**ft_split(char const *s, char c);
 char					*ft_substr(char const *s, unsigned int start,
 							size_t len);
 size_t					ft_strlen(const char *s);
 void					ft_fill_stack(char **str, t_stack *stack);
 int						is_digit(int c);
-int						ft_atoi(char *s);
+long					ft_atoi(char *s, char **arr, int *stack);
 void					check_doubles(t_stack *stack);
 int						is_sorted(t_stack *stack);
+int						is_rev_sorted(t_stack *stack);
+void					ft_rev_sort(t_stack *stack);
 void					sa(t_stack *stack, int check);
 void					sb(t_stack *stack, int check);
 void					ss(t_stack *stack, int check);
@@ -67,6 +70,11 @@ void					push_from_a_to_b(t_stack *stack, int *tab,
 void					push_from_b_to_a(t_stack *stack);
 int						get_max_index(t_stack *stack);
 void					all(t_stack *stack);
-void					ft_check_instructions(t_stack *stack, char *line);
-
+void					ft_free(char **arr);
+void					ft_print_px(char a_or_b, int check_value);
+void					ft_free_atoi(char **str, int *ptr);
+void					atoi_init(int i, int sign, int res);
+void					ft_atoi_value(int i, int sign, long res);
+void					ft_check_empty_after_sign(char c, char **str, int *ptr);
+void					ft_check_digit(char c, char **str, int *ptr);
 #endif

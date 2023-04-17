@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 21:24:53 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/08 23:43:53 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/16 19:57:55 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_check_instructions(t_stack *stack, char *line)
+int	ft_check_instructions(t_stack *stack, char *line)
 {
 	if (ft_strcmp(line, "sa\n") == 0)
 		sa(stack, 0);
@@ -51,6 +51,6 @@ void	ft_check_instructions(t_stack *stack, char *line)
 	else if (ft_strcmp(line, "rrr\n") == 0)
 		rrr(stack, 0);
 	else
-		free_all(stack, line);
-	free(line);
+		return (1);
+	return (0);
 }
