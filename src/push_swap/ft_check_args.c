@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:35 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/16 19:37:39 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:22:49 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	is_empty(char *str)
 	return (1);
 }
 
-void	check_doubles(t_stack *stack)
+void	check_doubles(t_stack *stack, char **str)
 {
 	int	i;
 	int	j;
@@ -45,6 +45,7 @@ void	check_doubles(t_stack *stack)
 			if (stack->a[i] == stack->a[j])
 			{
 				free(stack->a);
+				ft_free(str);
 				ft_error();
 			}
 		}
@@ -86,10 +87,16 @@ void	ft_fill_stack(char **str, t_stack *stack)
 
 	i = 0;
 	stack->a = (int *)malloc(sizeof(int) * stack->size_a);
+	if (!stack->a)
+	{
+		ft_free(str);
+		write(2, "Allocation failed for stack a\n", 30);
+		exit(1);
+	}
 	while (i < stack->size_a)
 	{
 		stack->a[i] = ft_atoi(str[i], str, stack->a);
 		i++;
 	}
-	check_doubles(stack);
+	check_doubles(stack, str);
 }

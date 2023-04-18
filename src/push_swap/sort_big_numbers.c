@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 01:18:40 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/15 20:29:25 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:22:28 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@ int	*put_stack_in_array(t_stack *stack)
 
 	i = 0;
 	tab = (int *)malloc(sizeof(int) * stack->size_a);
+	if (!tab)
+	{
+		free(stack->a);
+		free(stack->b);
+		write(2, "Allocation failed\n", 18);
+		exit(1);
+	}
 	while (i < stack->size_a)
 	{
 		tab[i] = stack->a[i];

@@ -6,7 +6,7 @@
 #    By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/02 01:33:52 by mbelouar          #+#    #+#              #
-#    Updated: 2023/04/17 18:10:57 by mbelouar         ###   ########.fr        #
+#    Updated: 2023/04/18 18:47:49 by mbelouar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ NAME_BONUS 	= checker
 CC			= cc
 CFLAGS 		= -Wall -Werror -Wextra -I includes
 RM 			= rm -f
-
+OBJS := $(SRC:.c=.o)
 OBJS_BONUS := $(SRC_BONUS:.c=.o)
  
 all:		$(NAME)

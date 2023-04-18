@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 21:07:33 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/17 02:17:16 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:48:36 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(int ac, char **av)
 	ft_fill_stack(str, &stack);
 	stack.b = (int *)malloc(sizeof(int) * stack.size_a);
 	if (!stack.b)
-		return (free(stack.a), 1);
+		return (free(stack.a), ft_free(str), 1);
 	stack.size_b = 0;
 	while (1)
 	{
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 		if (line == NULL)
 			break ;
 		if (ft_check_instructions(&stack, line))
-			free_stack_and_line(&stack, line);
+			free_stack_and_line_and_str(&stack, line, str);
 		free(line);
 	}
 	ft_check(&stack);

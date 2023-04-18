@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/18 17:16:52 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 18:12:35 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t					ft_strlen(const char *s);
 void					ft_fill_stack(char **str, t_stack *stack);
 int						is_digit(int c);
 long					ft_atoi(char *s, char **arr, int *stack);
-void					check_doubles(t_stack *stack);
+void					check_doubles(t_stack *stack, char **str);
 int						is_sorted(t_stack *stack);
 int						is_rev_sorted(t_stack *stack);
 void					ft_rev_sort(t_stack *stack);
