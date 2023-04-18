@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:32:49 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/16 22:45:07 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:18:01 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,10 @@ int	main(int ac, char **av)
 	if (is_rev_sorted(&stack) == 1)
 	{
 		ft_rev_sort(&stack);
+		free_all(&stack, str);
 		return (0);
 	}
 	all(&stack);
-	ft_free(str);
-	free(stack.a);
-	free(stack.b);
+	free_all(&stack, str);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 01:31:45 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/17 22:01:02 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:16:52 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
@@ -77,4 +76,5 @@ void					atoi_init(int i, int sign, int res);
 void					ft_atoi_value(int i, int sign, long res);
 void					ft_check_empty_after_sign(char c, char **str, int *ptr);
 void					ft_check_digit(char c, char **str, int *ptr);
+void					free_all(t_stack *stack, char **str);
 #endif

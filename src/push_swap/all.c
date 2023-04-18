@@ -6,7 +6,7 @@
 /*   By: mbelouar <mbelouar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 22:28:54 by mbelouar          #+#    #+#             */
-/*   Updated: 2023/04/17 18:09:49 by mbelouar         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:17:10 by mbelouar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,11 @@ void	all(t_stack *stack)
 		push_from_b_to_a(stack);
 		free(tab);
 	}
+}
+
+void	free_all(t_stack *stack, char **str)
+{
+	ft_free(str);
+	free(stack->a);
+	free(stack->b);
 }
